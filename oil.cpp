@@ -32,7 +32,7 @@ int main() {
 			highestPrice(oilData);
 			break;
 		case 2:
-			highestAvgPrice(oilData); // Could not get this to work properly
+			highestAvgPrice(oilData);
 			break;
 		default:
 			puts("\nInvalid input.\n");
