@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 4 - Question 1</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.js"></script>
+	<style type="text/css">
+	p {
+		padding: 6px;
+	}
+	</style>
+</head>
+<body>
+	<p onclick="editStyle()" style="font-size: 16px; color: #dc143c; background-color: #fff86f; font-family: 'Century Gothic';">Element 1</p>
+	<p onclick="editStyle()" style="font-size: 20px; color: #8b4500; background-color: #97ffff; font-family: Calibri;">Element 2</p>
+	<p onclick="editStyle()" style="font-size: 24px; color: #104e8b; background-color: #f1edc2; font-family: 'Courier New';">Element 3</p>
+	<p onclick="editStyle()" style="font-size: 28px; color: #228b22; background-color: #f589f5; font-family: Impact;">Element 4</p>
+
+	<script type="text/javascript">
+		// Was only able to get this code to work when it was placed here, not in a script tag in the head tag
+		$(document).ready(function() {
+			for (var i = 1; i <= 4; i++) {
+				$("<p/>", {
+					text: "Template " + i + " (Note: this cannot be changed but can be used to change other elements)",
+					class: "template",
+					id: "template" + i,
+					onclick: "editStyle()"
+				}).appendTo("body");
+			}
+			$("#template1").css({fontSize: "14px", color: "#f4a190", backgroundColor: "#7fffd4", fontFamily: "Arial Black"});
+			$("#template2").css({fontSize: "26px", color: "#00ff00", backgroundColor: "#000000", fontFamily: "Lucida Console"});
+			$("#template3").css({fontSize: "32px", color: "#9d9dc5", backgroundColor: "#fffaca", fontFamily: "Georgia"});
+			$("#template4").css({fontSize: "36px", color: "#f3eaa9", backgroundColor: "#13dddd", fontFamily: "Comic Sans MS"});
+		});
+		
+		var firstStyle;
+		// Global variable, so information about what elements have been clicked on can be stored outside function
+		
+		function editStyle () {
+			if (firstStyle == undefined) { // Before anything is clicked on, firstStyle is undefined
+				firstStyle = event.target.style;
+			} else if ("template" == event.target.className) { // The user cannot change the style of the templates
+				return; // Stop the rest of the function from running while keeping the value of firstStyle
+			} else {
+				for (declaration in firstStyle) {
+					event.target.style[declaration] = firstStyle[declaration];
+				}
+				firstStyle = undefined; // Must undefine firstStyle so it can be as if nothing has been clicked on yet
+			}
+		}
+	</script>
+</body>
+</html>
