@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 3 - Question 2</title>
+	<style>
+		tr { width: 300px; height: 100px }
+		td { width: 100px; height: 100px }
+		img { width: 100px; height: 100px }
+	</style>
+	<script type="text/javascript">
+		function moveImgRandomly() {
+			var tableCell = document.getElementsByTagName("td");
+			var imgCell = document.getElementById("imgCell");
+			var img = document.getElementById("img");
+			var cellNo = Math.floor(Math.random() * 9);
+			/* random() returns a decimal fraction between 0 and 1 so it has to be scaled up by 9 and without everything to the left of the decimal point */
+			
+			img = imgCell.removeChild(img);
+			/* These next two lines move the imgCell id over to where the image now is so the next function call will work */
+			imgCell.removeAttribute("id");
+			tableCell[cellNo].setAttribute("id", "imgCell");
+			
+			tableCell[cellNo].appendChild(img);
+		}
+	</script>
+</head>
+<body onload="setInterval(moveImgRandomly, 200);">
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td id="imgCell"><img src="http://graemehobbs93.files.wordpress.com/2012/01/ape-1.jpg" onclick="alert('Caught!');" id="img"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+</body>
+</html>
