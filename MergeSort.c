@@ -30,7 +30,7 @@ int main() {
 	i = 0;
 	fopen_s(&intNosSorted, "C:/Users/Liam/Documents/intNosSorted.txt", "w");
 	while (i < SIZE) {
-		fprintf(intNosSorted, "%d\n", numbers[i++])3 // The number is printed to the file THEN incremented by 1
+		fprintf(intNosSorted, "%d\n", numbers[i++]); // The number is printed to the file THEN incremented by 1
 	}
 	fclose(intNosSorted); // No longer need intNosSorted.txt so I can close it
 	
