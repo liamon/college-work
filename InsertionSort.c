@@ -3,7 +3,7 @@
 
 #define SIZE 100
 
-int main() {
+int main(void) {
 	FILE *realNos, *realNosSorted;
 	int i = 0, j;
 	double realNumbers[SIZE];
