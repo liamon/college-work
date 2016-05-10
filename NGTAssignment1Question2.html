@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 1 - Question 2</title>
+	<script type="text/javascript">
+		function printCapitalName() {
+			var name = window.prompt("Please enter your name:");
+			// If a second argument is not given in window.prompt, the entry field is left blank
+			
+			while (name == "" || name == null) {
+				if (name == "") {
+					window.alert("You didn't enter a name!");
+				}
+				name = window.prompt("Please enter your name:"); // This is in case the cancel button is clicked
+			}
+			
+			name = name.toUpperCase();
+			document.write(name);
+			document.write("<br>"); // This must be here else names will appear all on the same line with no spaces between them
+		}
+
+		function repeatFunc(func, times) {
+			var i = 0;
+			do {
+				func();
+			} while (++i < times);
+			// Post-increment, so after 1 time it will check if 1 < 5 and after 5 times it will check if 5 < 5 and stop
+		}
+	</script>
+</head>
+<body onload="repeatFunc(printCapitalName, 5);">
+
+</body>
+</html>
