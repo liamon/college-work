@@ -8,7 +8,7 @@ clock_t timeTaken; // This variable must be global so both main and countSort ca
 
 void countSort(int num[], int start, int end); 
 
-int main() {
+int main(void) {
 	FILE *intNos, *intNosSorted;
 	int i = 0;
 	int numbers[SIZE];
