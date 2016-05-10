@@ -18,7 +18,7 @@ char *getMonth(int month);
 
 int yearcount = countYears(); // Global variable
 
-int main() {
+int main(void) {
 	int choice = 0;
 	oil *oilData = (oil *)malloc(sizeof(oil) * yearcount);
 	getOilData(oilData);
