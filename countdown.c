@@ -13,7 +13,7 @@ int wordTest(char *word, char *userWord, char *letterChoice);
 void printCompuWord(char *compuWord);
 int validUserWord(char *word, char *letters);
 
-int main() {
+int main(void) {
 	char yourWord[9] = "";
 	char buffer[9] = "";
 	puts("Welcome to Countdown!");
