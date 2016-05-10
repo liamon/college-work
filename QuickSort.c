@@ -6,7 +6,7 @@
 
 void quickSort(int num[], int start, int end);
 
-int main() {
+int main(void) {
 	FILE *intNos, *intNosSorted;
 	int i = 0;
 	int numbers[SIZE];
