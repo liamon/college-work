@@ -8,7 +8,7 @@ void search(char name[]);
 
 char surname[SIZE][12]; // This needs to be a global variable so both main and search can access it
 
-int main() {
+int main(void) {
 	FILE *surnames;
 	int i = 0;
 	char nameToFind[12];
