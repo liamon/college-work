@@ -7,7 +7,7 @@
 void mergeSort(int num[], int start, int end);
 void merge(int num[], int start, int mid, int end);
 
-int main() {
+int main(void) {
 	FILE *intNos, *intNosSorted;
 	int i = 0;
 	int numbers[SIZE];
