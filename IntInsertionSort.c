@@ -8,7 +8,7 @@ void insertionSort(int num[]);
 
 clock_t timeTaken; // This variable must be global so both main and insertionSort can access it
 
-int main()
+int main(void)
 	FILE *intNos, *intNosSorted;
 	int i = 0;
 	int numbers[SIZE];
