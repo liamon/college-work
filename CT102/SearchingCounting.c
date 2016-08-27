@@ -13,7 +13,7 @@ int main(void) {
 	int i = 0;
 	char nameToFind[12];
 	
-	fopen_s(&surnames, "C:/Users/Liam/Downloads/surnames.txt", "r");
+	fopen_s(&surnames, "surnames.txt", "r");
 	if (surnames == NULL) { // Test if the file was able to open properly
 		puts("Error opening file.");
 		return 1;
