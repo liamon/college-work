@@ -10,7 +10,7 @@ int main(void) {
 	double current;
 	double total = 0.0;
 
-	fopen_s(&realNos, "C:/Users/Liam/Downloads/realNos.txt", "r");
+	fopen_s(&realNos, "realNos.txt", "r");
 	if (realNos == NULL) { // Test if the file was able to open properly
 		puts("Error opening file.");
 		return 1;
@@ -32,7 +32,7 @@ int main(void) {
 		i++;
 	}
 	i = 0;
-	fopen_s(&realNosSorted, "C:/Users/Liam/Documents/realNosSorted.txt", "w");
+	fopen_s(&realNosSorted, "realNosSorted.txt", "w");
 
 	while (i < SIZE) {
 		fprintf(realNosSorted, "%lf\n", realNumbers[i++]); // The number is printed to the file THEN incremented by 1
