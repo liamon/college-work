@@ -13,7 +13,7 @@ int main(void)
 	int i = 0;
 	int numbers[SIZE];
 	
-	fopen_s(&intNos, "C:/Users/Liam/Downloads/intNos.txt", "r");
+	fopen_s(&intNos, "intNos.txt", "r");
 	if (intNos == NULL) { // Test if the file was able to open properly
 		puts("Error opening file.");
 		return 1;
@@ -26,7 +26,7 @@ int main(void)
 	insertionSort(numbers);
 	
 	i = 0;
-	fopen_s(&intNosSorted, "C:/Users/Liam/Documents/intNosSorted.txt", "w");
+	fopen_s(&intNosSorted, "intNosSorted.txt", "w");
 	while (i < SIZE) {
 		fprintf(intNosSorted, "%d\n", numbers[i++]); // The number is printed to the file THEN incremented by 1
 	}
