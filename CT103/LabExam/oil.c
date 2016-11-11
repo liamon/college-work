@@ -20,7 +20,8 @@ int yearcount = countYears(); // Global variable
 
 int main(void) {
 	int choice = 0;
-	oil *oilData = (oil *)malloc(sizeof(oil) * yearcount);
+	oil *oilData = malloc(sizeof(oil) * yearcount);
+	// In my original answer to this question, I had (oil *) before the malloc but this is only required in C++ code.
 	getOilData(oilData);
 	printChoices();
 	scanf("%d", &choice);
