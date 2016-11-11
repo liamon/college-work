@@ -137,7 +137,7 @@ void printCompuWord(char *compuWord) {
 }
 
 int validUserWord(char *word, char *letters) {
-	FILE *wordlist = fopen("C:/Users/Liam/Documents/webster.txt", "r");
+	FILE *wordlist = fopen("webster.txt", "r");
 	/* Must be opened and closed within the function so it starts searching from the start for each new word given */
 	char wordToCompare[9] = "";
 	int wordLetCount[26] = { 0 };
