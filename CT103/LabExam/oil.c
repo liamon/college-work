@@ -51,7 +51,7 @@ void printChoices() {
 }
 
 oil *getOilData(oil *oilData) {
-	FILE *oilfile = fopen("C:/Users/Liam/Documents/oil.txt", "r");
+	FILE *oilfile = fopen("oil.txt", "r");
 	char buffer[144] = "";
 	oil *oilptr = oilData;
 	int i = 0;
@@ -102,7 +102,7 @@ void highestAvgPrice(oil *oilData) {
 }
 
 int countYears() {
-	FILE *oilfile = fopen("C:/Users/Liam/Documents/oil.txt", "r");
+	FILE *oilfile = fopen("oil.txt", "r");
 	char buffer[144] = "";
 	int count = 0;
 	while (!feof(oilfile)) {
