@@ -22,7 +22,7 @@ int main(void) {
 	}
 	fclose(intNos); // No longer need intNos.txt so I can close it
 	
-	timeTaken = clock(); // mergeSort is recursive so I have to measure time taken outside the function
+	timeTaken = clock(); // quickSort is recursive so I have to measure time taken outside the function
 	quickSort(numbers, 0, SIZE - 1);
 	timeTaken = clock() - timeTaken;
 	
